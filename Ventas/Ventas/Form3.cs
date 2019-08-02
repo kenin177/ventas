@@ -11,27 +11,24 @@ using Ventas.BL;
 
 namespace Ventas
 {
-    public partial class Form1 : Form
+    public partial class Form3 : Form
     {
-        public Form1()
+        public Form3()
         {
             InitializeComponent();
+            var productosBL = new ProductosBL();
+            listadeProductosBindingSource.DataSource = productosBL.ListadeProductos;
 
-            var clientesBL = new ClienteBL();
+            var clientesBL = new ClientesBL();
             listadeClientesBindingSource.DataSource = clientesBL.ListadeClientes;
-
-            var ciudadesBL = new CiudadesBL();
-            listadeCiudadBindingSource.DataSource = ciudadesBL.ListadeCiudad; 
-
-
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
